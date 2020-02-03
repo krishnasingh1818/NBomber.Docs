@@ -29,7 +29,7 @@ namespace Examples
             });
 
             // after creating a step you should add it to Scenario.
-            var scenario = ScenarioBuilder.CreateScenario("Hello World!", step);
+            var scenario = ScenarioBuilder.CreateScenario("Hello World!", new IStep[] { step });
 
             NBomberRunner.RegisterScenarios(scenario)
                          .RunInConsole();
